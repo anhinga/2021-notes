@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-February 13, 2021\footnote{Version 2.1.2. Version 2.0 (08-07-20) is at
+February 13, 2021\footnote{Version 2.2. Version 2.0 (08-07-20) is at
 \href{https://github.com/anhinga/2020-notes/tree/master/research-agenda}
 {\tt https://github.com/anhinga/2020-notes/tree/master/research-agenda}}
 
@@ -332,29 +332,37 @@ and a benefit of having a DeepMind JAX ecosystem built around
 it\footnote{\href{https://deepmind.com/blog/article/using-jax-to-accelerate-our-research}
 {\tt https://deepmind.com/blog/article/using-jax-to-accelerate-our-research}}. 
 
-For a more detailed analysis of a choice of PyTorch-like platform vs a next generation ultra-flexible
-machine learning platform like Julia Flux or JAX see our preliminary research 
+For a more detailed analysis of choosing a PyTorch-like platform for DMM implementation vs choosing one of next generation ultra-flexible
+machine learning platforms such as Julia Flux or JAX see our preliminary research 
 draft\footnote{Michael Bukatin, {\em Dataflow matrix machines, tree-shaped flexible tensors, neural architecture search, 
 and PyTorch}, January 2021. \href{https://github.com/anhinga/2021-notes/tree/main/research-drafts}
 {\tt https://github.com/anhinga/2021-notes/tree/main/research-drafts}} . 
 
 \section{DMMs vs. differential programming: a meta-learning aspect}
 
-Given that DMMs provide general-purpose programming capabilities, having DMMs as a programming
-formalism would provide differential programming (``Software 2.0") capabilities.
+Given that DMMs are neural machines with general-purpose programming capabilities, using DMMs as a programming
+formalism would provide differential programming (``Software 2.0") capabilities\footnote{In this section we use 
+``differential programming" and ``Software 2.0" interchangeably while recognizing that modern differential
+programming permits some discontinuities, e.g. the use of ReLU brings discontinuities in derivatives, etc.}
 
 What are the trade-off associated with having Software 2.0 capabilities implemented as DMMs rather
 than as Python or Julia? On one hand, DMMs is an unusual platform: programming in DMMs
 means essentially programming in dataflow or functional reactive style. It is a version of
-stream-oriented programming, and the implementing team needs to provides capabilities of combining several streams with
-numerical coefficients to make sure that these programs have properties of neural machines.
+stream-oriented programming, and {\em the implementing team needs to provides capabilities of combining several streams with
+numerical coefficients to make sure that these programs have properties of neural machines}.
 
 So the constraint here is that one is forced to program in a rather unfamiliar stream-oriented style.
 However, the benefit from making this choice is that better metalearning is available. In ordinary Software 2.0,
-the metalearning in its full generality is equivalent to program synthesis, and our current progress in
+the {\em metalearning in its full generality includes program synthesis}, and our current progress in
 program synthesis is relatively slow compared to many other areas of machine learning.
 However, if one implements Software 2.0 via DMMs, then metalearning is DMM synthesis,
 which we expect to be a much more tractable problem.
+
+At the same time, the whole point of modern differential programming (mostly, in its Julia Flux and Python/JAX
+incarnations) is that one can incorporate fragments of models straight into a reasonably general subset of
+Julia or Python. In particular, one can incorporate fragments of DMMs and DMM-related constructions straight into
+Julia or Python; therefore one can start using various DMM-related methods without being purist and without
+waiting until one is in position to move one's whole Software 2.0 process entirely to DMMs. 
 
 \section{Links to fuzzy and multivalued logic of
 partial inconsistency}
