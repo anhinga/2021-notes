@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-February 13, 2021\footnote{Version 2.2. Version 2.0 (08-07-20) is at
+February 17, 2021\footnote{Version 2.2.1. Version 2.0 (08-07-20) is at
 \href{https://github.com/anhinga/2020-notes/tree/master/research-agenda}
 {\tt https://github.com/anhinga/2020-notes/tree/master/research-agenda}}
 
@@ -148,7 +148,7 @@ of lists into trees, one can build a similarly compact dataflow matrix machine
 accumulating a list of asynchronous incoming events
 (e.g. mouse clicks, see Section 6.3 of the DMM reference paper, \href{https://arxiv.org/abs/1712.07447}{\tt https://arxiv.org/abs/1712.07447}). 
 
-For more examples of DMMs as programs see {\em Map of DMM-related programming examples and techniques}: 
+For more examples of DMMs as programs, see {\em Map of DMM-related programming examples and techniques}: 
 
 \hspace{0.3in}\href{https://github.com/anhinga/2020-notes/tree/master/programming-overview}{\tt https://github.com/anhinga/2020-notes/tree/master/programming-overview}
 
@@ -327,12 +327,12 @@ differentiable programming system is particularly impressive\footnote{Michael In
 Michael Innes et al., {\em A Differentiable Programming System to Bridge Machine Learning and Scientific Computing}, 
 July 2019, \href{https://arxiv.org/abs/1907.07587}{\tt https://arxiv.org/abs/1907.07587}}.
 
-JAX also has a comparable degree of flexibility with its {\bf pytree} protocol and differential programming capabilities,
-and a benefit of having a DeepMind JAX ecosystem built around 
+JAX has a comparable degree of flexibility as well with its {\bf pytree} protocol and differential programming capabilities,
+and a benefit of having the DeepMind JAX Ecosystem built around 
 it\footnote{\href{https://deepmind.com/blog/article/using-jax-to-accelerate-our-research}
 {\tt https://deepmind.com/blog/article/using-jax-to-accelerate-our-research}}. 
 
-For a more detailed analysis of choosing a PyTorch-like platform for DMM implementation vs choosing one of next generation ultra-flexible
+For a more detailed analysis of choosing a PyTorch-like platform for DMM implementation vs. choosing one of the next generation ultra-flexible
 machine learning platforms such as Julia Flux or JAX see our preliminary research 
 draft\footnote{Michael Bukatin, {\em Dataflow matrix machines, tree-shaped flexible tensors, neural architecture search, 
 and PyTorch}, January 2021. \href{https://github.com/anhinga/2021-notes/tree/main/research-drafts}
@@ -348,8 +348,9 @@ programming permits some discontinuities, e.g. the use of ReLU brings discontinu
 What are the trade-off associated with having Software 2.0 capabilities implemented as DMMs rather
 than as Python or Julia? On one hand, DMMs is an unusual platform: programming in DMMs
 means essentially programming in dataflow or functional reactive style. It is a version of
-stream-oriented programming, and {\em the implementing team needs to provides capabilities of combining several streams with
-numerical coefficients to make sure that these programs have properties of neural machines}.
+stream-oriented programming, and the {\em implementing team needs to provides capabilities of taking linear
+combinations of streams in question} (that is, the ability to combine several streams with
+numerical coefficients) {\em so that the resulting programs are neural machines}.
 
 So the constraint here is that one is forced to program in a rather unfamiliar stream-oriented style.
 However, the benefit from making this choice is that better metalearning is available. In ordinary Software 2.0,
@@ -359,9 +360,10 @@ However, if one implements Software 2.0 via DMMs, then metalearning is DMM synth
 which we expect to be a much more tractable problem.
 
 At the same time, the whole point of modern differential programming (mostly, in its Julia Flux and Python/JAX
-incarnations) is that one can incorporate fragments of models straight into a reasonably general subset of
-Julia or Python. In particular, one can incorporate fragments of DMMs and DMM-related constructions straight into
-Julia or Python; therefore one can start using various DMM-related methods without being purist and without
+incarnations) is that one can incorporate fragments of more traditional models straight into a reasonably general subset of
+Julia or Python, and using the resulting programs as more expressive models with strong priors. In particular, one can incorporate fragments of DMMs and DMM-related constructions straight into
+Julia or Python; therefore one can start using various DMM-related methods within a differential programming
+framework without being purist and without
 waiting until one is in position to move one's whole Software 2.0 process entirely to DMMs. 
 
 \section{Links to fuzzy and multivalued logic of
