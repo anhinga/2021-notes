@@ -1,0 +1,259 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{comment}
+
+\baselineskip=15pt minus 1pt
+\overfullrule=0pt
+
+% maximize page usage
+\oddsidemargin 1pt
+\evensidemargin 1pt
+\marginparwidth 30pt % these gain 53pt width
+\topmargin 1pt       % gains 26pt height
+\headheight 1pt      % gains 11pt height
+\headsep 1pt         % gains 24pt height
+%\footheight 12 pt % cannot be changed as number must fit
+\footskip 24pt       % gains 6pt height
+\textheight % 528 + 26 + 11 + 24 + 6 + 90 for luck
+            685pt
+\textwidth % 360 + 53 + 47 for luck
+           480pt
+% end of page layout changes
+
+\begin{document}
+
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\renewcommand\contentsname{\vspace{-\baselineskip}}
+
+
+\begin{center}
+
+{\bf Towards Practical Use of Dataflow Matrix Machines}
+                                   
+
+
+
+\vspace{0.1in}
+Michael A. Bukatin
+
+
+\vspace{0.085in}
+March 16, 2021
+\end{center}
+
+
+
+\begin{abstract}
+{\bf Dataflow matrix machines (DMMs)} form a class of neural machines with very interesting
+theoretical properties. On the level of single neurons,  they replace streams of numbers by arbitrary streams 
+allowing linear combinations of several streams
+({\bf linear streams}). It turns out that this change and a few other modifications make the resulting
+formalism suitable for general-purpose stream-oriented programming with {\bf continuously deformable
+programs}. At the same time, these neural machines are expressive enough to provide convenient and flexible facilities
+for {\bf compositional metalearning}.
+
+There are experimental research-grade open-source implementations of self-referential dataflow
+matrix machines in Processing (with traditional mutable matrices) and in Clojure (with immutable
+streams of tree-shaped ``flexible tensors"), and a number of open-source software experiments have been conducted
+using these implementations.
+
+It is time to create a more professional implementation of DMMs in one of the modern ultra-flexible frameworks
+for differentiable programming such as Julia Flux or JAX, and to start using dataflow matrix machines
+in machine learning applications. In particular, one should be able to fruitfully target
+applications in {\bf program synthesis} and in {\bf metalearning}.
+\end{abstract}
+
+\section{Introduction}
+
+Many of us know the history of ReLU use in neural networks. In the year 2000, it became apparent that
+the use of ReLU induced semantically meaningful sparsity\footnote{Richard Hahnloser, Rahul Sarpeshkar, 
+Misha Mahowald, Rodney Douglas, H. Sebastian Seung. 
+Digital selection and analogue amplification coexist in a cortex-inspired silicon circuit.
+{\em Nature}, {\bf 405}, pp. 947–951 (2000). The reasons for sparsity induction by ReLU are similar
+to the reasons for sparsity induction by L1 regularization, which not surprising given that 
+L1 regularization adds the regularization term $\alpha\sum(\mbox{ReLU}(w_{\ij})+\mbox{ReLU}(-w_{\ij}))$ to the loss function.}. At that moment
+one should have been able to conclude that ReLU was a very promising activation function.
+However, the first papers showing that the use of ReLU actually improved performance on particular
+benchmarks had only appeared in 2009-2011\footnote{Kevin Jarrett, Koray Kavukcuoglu, Marc’Aurelio Ranzato, Yann LeCun. {\em What is the Best Multi-Stage Architecture for Object Recognition?}, ICCV'2009; Vinod Nair, Geoffrey Hinton,
+{\em Rectified Linear Units Improve Restricted Boltzmann Machines}, ICML'2010; Xavier Glorot, Antoine Bordes, Yoshua Bengio. 
+{\em Deep Sparse Rectifier Neural Networks}. AISTATS'2011.}, and only then widespread adoption of ReLU
+had actually started.
+
+We currently have a somewhat similar situation with DMMs. Their theoretical properties are very attractive,
+but the hard work of demonstrating that DMMs can be used to improve performance on particular benchmarks
+has not been done.
+
+Moreover, when DMMs were introduced in 2015-2017, the existing machine learning frameworks
+were still rather rigid, and implementing the most flexible varieties of DMMs would take a lot of labor
+in frameworks such as, for example, TensorFlow or PyTorch. 
+
+The situation is much more favorable now with
+the availability of modern ultra-flexible frameworks for differentiable programming such as Julia Flux or JAX,
+which seem to fit DMMs quite well.
+
+\section{Choice of Applications}
+
+We maintain a list of open problems and promising directions of research related to 
+DMMs\footnote{Michael Bukatin. {\em Dataflow Matrix Machines:  a Collaborative Research Agenda}, March 2021.\\
+\href{https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf}
+{\tt https://www.cs.brandeis.edu/$\sim$bukatin/dmm-collaborative-research-agenda.pdf}} in order to facilitate potential
+interdisciplinary collaborations. I am including the first three
+sections from that list verbatim as an appendix. 
+
+Here I briefly mention the main directions.
+
+\subsection{Program Synthesis}
+
+The task of synthesizing a neural machine should be much simpler than a general program synthesis task
+(the progress in neural architecture search seems to be ahead of the progress in program synthesis).
+
+\subsection{Metalearning}
+
+It seems that some kinds of metalearning in neural machines can benefit from increasing the dimension of
+network output (or network hidden state) relative to the dimension of the space of its weights. The recent
+paper by Kirsch and Schmidhuber\footnote{Louis Kirsch, Jürgen Schmidhuber,
+{\em Meta Learning Backpropagation And Improving It}, December 2020.\\
+\href{https://arxiv.org/abs/2012.14905}{\tt https://arxiv.org/abs/2012.14905}} seems to provide
+an experimental confirmation of that conjecture. Using DMMs would allow to push further in that direction. 
+
+\subsection{Other sections of ``Collaborative Research Agenda"}
+
+Section 6 provides more detailed considerations of implementation issues. Section 9 outlines
+what can be done to further leverage the fact that DMMs can handle streams of probabilistic
+samples of arbitrary nature without embedding those samples into vector spaces. 
+
+Section 10 notes that standard digital audio synthesis via composition of unit generators is essentially
+a flavor of irregular hand-crafted and hand-tuned neural networks using somewhat more powerful
+neurons (such as e.g. {\tt f(x,a,b) = sin(a*x+b)}) and suggests that DMMs should allow us to synthesize visual animations in the same style.
+So if one is looking for a more concrete application area for DMMs, neural machines generating
+visual animations might be a particularly attractive choice.
+
+Section 11 starts to analyze deep connections which exist between DMMs and attention-based models including
+Transformers. Promising directions of research include using what we know about DMMs to
+shed some light on the remarkable properties of Transformers and exploring the ways to incorporate key elements from Transformer architecture into a more flexible DMM setup. In particular, we are trying to see
+if it is possible to obtain interesting compact and low training cost models by 
+incorporating attention-inspired and Transformer-inspired motives into DMMs.
+
+
+\appendix
+
+\section{The first three sections of ``Collaborative Research Agenda"}
+
+\subsection{Background: how they work}
+
+The essence of neural model of computations is that linear and non-linear computations are interleaved. Hence, the natural
+degree of generality for neuromorphic computations is to work not with streams of numbers, but with arbitrary streams
+supporting the notion of linear combination of several streams ({\bf linear streams}).
+
+Dataflow matrix machines (DMMs) form a novel class of neural machines, which work with wide variety
+of {\bf linear streams} instead of streams of numbers. The neurons have
+arbitrary arity (arity of a neuron can be fixed or variable). Of particular note are
+self-referential facilities: ability to change weights, topology, and the size of the active part of the network dynamically, on the fly,
+and the reflection capability (the ability of the network to analyze its current configuration).
+
+There are various kinds of linear streams. They include streams of numbers, sparse vectors and sparse tensors (both of
+finite and infinite dimension), streams of functions and distributions. We found streams of V-values
+({\bf flexible tensors} based on tree-shaped indices) to be of particular use.
+
+A single dataflow matrix machine can process a large variety of different kinds of linear streams, or
+it can be based on a single kind of linear streams, sufficiently expressive for a given class of situations.
+
+This allows us to obtain 
+neural machines which combine {\bf general-purpose programming powers of stream-oriented
+architectures} such as traditional dataflow programming and
+more novel functional reactive programming with {\bf good machine learning
+properties of conventional neural networks.}
+
+There are deep connections between DMMs and attention-based models including Transformers.
+Each input of a neuron computes a linear combination of linear streams (which tend to be high-dimensional
+or infinite dimensional entities), so each input of each neuron performs a (generalized) attention operation.
+Transformer-like rewrites of DMM attention operations in terms of matrix multiplication are also available in many situations.
+
+\vspace{0.1in}
+\noindent
+{\bf Dataflow Matrix Machines resources:}
+
+Reference paper: \href{https://arxiv.org/abs/1712.07447}{\tt https://arxiv.org/abs/1712.07447}
+
+Reference slide deck: \href{https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf}{\footnotesize\tt https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf}
+
+GitHub Pages: \href{https://anhinga.github.io/}{\tt https://anhinga.github.io}
+
+Open source implementation (Clojure): \href{https://github.com/jsa-aerial/DMM}{\tt https://github.com/jsa-aerial/DMM}
+
+\subsection{Conventional programming and program synthesis} The dimension of the network and the dimension
+of data are decoupled, so compact neural machines for solving conventional programming problems are available.
+For example, by considering streams of maps from words to numbers, one can build a dataflow matrix machine
+counting words in a given text which uses only a few neurons 
+(Section 3 of \href{https://arxiv.org/abs/1606.09470}{\tt https://arxiv.org/abs/1606.09470}).
+Similarly, by considering streams of V-values  (flexible tensors based on tree-shaped indices) and embedding
+of lists into trees, one can build a similarly compact dataflow matrix machine
+accumulating a list of asynchronous incoming events
+(e.g. mouse clicks, see Section 6.3 of the DMM reference paper, \href{https://arxiv.org/abs/1712.07447}{\tt https://arxiv.org/abs/1712.07447}). 
+
+For more examples of DMMs as programs, see {\em Map of DMM-related programming examples and techniques}: 
+
+\hspace{0.3in}\href{https://github.com/anhinga/2020-notes/tree/master/programming-overview}{\tt https://github.com/anhinga/2020-notes/tree/master/programming-overview}
+
+\vspace{0.1in}
+
+The task of synthesis of dataflow matrix machines
+should be more tractable than conventional program synthesis. When one works with DMMs, the task of
+{\em learning program sketches} is reformulated as {\em neural architecture search},
+and converting a program sketch to a full program should be done by
+conventional methods of neural net training. 
+
+\vspace{0.1in}
+\noindent
+Dataflow matrix machines allow us  to combine
+
+  \begin{itemize}
+      \item aspects of {\em program synthesis} setup\\ (compact, human-readable programs);
+      \item aspects of {\em program inference} setup\\ (continuous models defined by matrices).
+  \end{itemize}
+
+\subsection{Self-modification, learning to learn, and neuroevolution} \label{sec:selfref}
+
+Using neural networks for metalearning
+is always non-trivial. In particular, dimension mismatch, namely the number of neuron outputs 
+being much smaller than the number of network weights,
+means that a neural network
+can only modify itself in a highly constrained manner. Dataflow matrix machines address
+this problem and have {\bf powerful and flexible self-modification facilities}.
+
+Therefore, a dataflow matrix machine can be equipped with a variety of primitives
+which perform self-modifications, and it can fruitfully learn various linear combinations and
+compositions involving those primitives.
+
+Self-modification facilities of dataflow matrix machines are not limited to the weight
+changes for the existing connections in the network. The available primitives allow to
+modify the network topology as well. For example, primitives allowing the network
+to control its own fractal-like growth by the means of cloning its own subnetworks
+are available.
+
+Therefore, this is a very promising architecture not only for methods of learning to learn
+better in a traditional sense, but also for methods of learning to perform
+neural architecture search better. 
+
+A dataflow matrix machine can comfortably host
+an evolving population of other DMMs inside itself, so it is
+an excellent environment for neuroevolution experiments and, in particular,
+for the experiments aiming to learn to evolve better (or to evolve to evolve better).
+
+\vspace{0.1in}
+\noindent
+In our software experiments, we used self-modification facilities to
+
+  \begin{itemize}
+     \item produce controlled wave patterns in the network matrix (see Appendix B.2 of our LearnAut 2017 paper, \href{https://arxiv.org/abs/1706.00648}{\tt https://arxiv.org/abs/1706.00648});
+     \item create randomly initialized self-referential DMMs which generated interesting emerging behaviors (see Section 1.2 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf});
+     \item edit a running network on the fly by sending it requests to edit itself (in particular, this enables {\bf livecoding}, but this is also quite open-ended, since it enables a population of networks to tell each other to modify themselves; of course, the receiving network doesn't have to follow an incoming instruction to self-modify blindly, although in the most simple-minded case it would do so; see Section 1.1 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf}).
+  \end{itemize}
+
+
+
+
+
+\end{document}
