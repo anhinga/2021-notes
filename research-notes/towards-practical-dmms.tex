@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-March 16, 2021
+March 17, 2021
 \end{center}
 
 
@@ -54,9 +54,9 @@ formalism suitable for general-purpose stream-oriented programming with {\bf con
 programs}. At the same time, these neural machines are expressive enough to provide convenient and flexible facilities
 for {\bf compositional metalearning}.
 
-There are experimental research-grade open-source implementations of self-referential dataflow
+We created experimental research-grade open-source implementations of self-referential dataflow
 matrix machines in Processing (with traditional mutable matrices) and in Clojure (with immutable
-streams of tree-shaped ``flexible tensors"), and a number of open-source software experiments have been conducted
+streams of tree-shaped ``flexible tensors"), and conducted a number of open-source software experiments
 using these implementations.
 
 It is time to create a more professional implementation of DMMs in one of the modern ultra-flexible frameworks
@@ -81,9 +81,9 @@ benchmarks had only appeared in 2009-2011\footnote{Kevin Jarrett, Koray Kavukcuo
 {\em Deep Sparse Rectifier Neural Networks}. AISTATS'2011.}, and only then widespread adoption of ReLU
 had actually started.
 
-We currently have a somewhat similar situation with DMMs. Their theoretical properties are very attractive,
+I believe that we currently have a somewhat similar situation with DMMs. Their theoretical properties are very attractive,
 but the hard work of demonstrating that DMMs can be used to improve performance on particular benchmarks
-has not been done.
+has not been done yet.
 
 Moreover, when DMMs were introduced in 2015-2017, the existing machine learning frameworks
 were still rather rigid, and implementing the most flexible varieties of DMMs would take a lot of labor
@@ -107,7 +107,7 @@ Here I briefly mention the main directions.
 \subsection{Program Synthesis}
 
 The task of synthesizing a neural machine should be much simpler than a general program synthesis task
-(the progress in neural architecture search seems to be ahead of the progress in program synthesis).
+(the progress in neural architecture search seems to be ahead of the progress in conventional program synthesis).
 
 \subsection{Metalearning}
 
