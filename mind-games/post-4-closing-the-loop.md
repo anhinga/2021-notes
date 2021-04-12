@@ -63,4 +63,6 @@ The main safety guideline (short of not doing this at all) is to go slow and to 
 
 Let’s discuss…
 
+***
+
 **April 12, 2021 update:** In a closed loop we probably want to program automatic disconnects or automatic connection breaks, at least during the initial stages.
