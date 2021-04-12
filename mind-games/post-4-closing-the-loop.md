@@ -62,3 +62,5 @@ In some sense, this set-up is a great stepping stone to **hybrid machine-human c
 The main safety guideline (short of not doing this at all) is to go slow and to be aware that closing feedback loops in a situations like these might lead to abrupt qualitative changes.
 
 Let’s discuss…
+
+**April 12, 2021 update:** In a closed loop we probably want to program automatic disconnects or automatic connection breaks, at least during the initial stages.
