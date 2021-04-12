@@ -16,3 +16,8 @@ Then various schemes from machine learning (various predictive modelling schemes
 
 It is likely that this protocol would need to be repeated for every person wishing to play the Mind Game, although it is possible that some common features would also be discovered.
 
+### May 12, 2019 comment
+
+7 years later: it is very obvious that this was written before the start of deep learning revolution (Dec. 2012).
+
+In particular, consider all the emphasis on feature extraction, whereas today it is customary to let a deep neural net to figure out the right features on its own...
