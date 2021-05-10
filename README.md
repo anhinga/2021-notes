@@ -14,3 +14,18 @@ The `research-drafts` directory contains a useful write-up of issues one needs t
 if one wants to fully implement DMMs in PyTorch. However, my recommendation is to
 implement DMMs in something like Julia Flux and JAX which fit DMMs much better
 (see the `research-notes` directory).
+
+---
+
+The `mind-games` directory contains my old spec for "non-invasive" brain-computer interfaces.
+
+It might be that the time has come to start resurrecting this line of thinking.
+
+---
+
+The `matrix-mult-machines` focusing on my key experimental activity this year: study of
+machines where matrix multiplication plays a key role, and visual study of matrix multiplication
+performed by interpreting monochrome images as matrices and multiplying them using matrix multiplication.
+
+So far this looks very promising.
+
