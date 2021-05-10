@@ -16,7 +16,7 @@ In particular, we started experimental explorations where we **interpret monochr
 
 In 2021 we focus on this kind of studies much more.
 
-## Experimental studies
+## Experimental studies (2021)
 
 We did quite a bit of studies related to interpreting monochrome images as matrices and multiplying them via matrix multiplication in 2021:
 
