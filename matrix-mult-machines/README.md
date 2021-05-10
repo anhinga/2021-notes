@@ -8,7 +8,7 @@ See Section "DMMs and Transformers" of https://www.cs.brandeis.edu/~bukatin/dmm-
 
 See also https://github.com/anhinga/2020-notes/tree/master/attention-based-models
 
-In particular, we started to focus on **"Machines with matrix multiplication as a key element":
+In particular, we started to focus on **"Machines with matrix multiplication as a key element"**:
 
 https://github.com/anhinga/2020-notes/blob/master/attention-based-models/matrix-mult-machines.md
 
