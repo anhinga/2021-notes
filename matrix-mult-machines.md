@@ -17,3 +17,20 @@ In particular, we started experimental explorations where we **interpret monochr
 In 2021 we focus on this kind of studies much more.
 
 ## Experimental studies
+
+We did quite a bit of studies related to interpreting monochrome images as matrices and multiplying them via matrix multiplication in 2021:
+
+https://github.com/anhinga/julia-notebooks/tree/main/images-as-matrices
+
+This is an active work, which is continuing.
+
+We have also resurrected some of the 2020 work by the "Grimoire team"
+
+https://github.com/anhinga/julia-notebooks/tree/main/grimoire-team
+
+and we married the image transformations created during that period
+with matrix multiplication: 
+
+https://github.com/anhinga/julia-notebooks/tree/main/grimoire-team/variations
+
+
