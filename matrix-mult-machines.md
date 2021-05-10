@@ -33,4 +33,4 @@ with matrix multiplication:
 
 https://github.com/anhinga/julia-notebooks/tree/main/grimoire-team/variations
 
-
+_This is an active line of research, to be continued..._
