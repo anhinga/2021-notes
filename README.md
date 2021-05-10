@@ -23,7 +23,7 @@ It might be that the time has come to start resurrecting this line of thinking.
 
 ---
 
-The `matrix-mult-machines` focuses on my key experimental activity this year: study of
+The `matrix-mult-machines` directory focuses on my key experimental activity this year: study of
 machines where matrix multiplication plays a key role, and visual study of matrix multiplication
 performed by interpreting monochrome images as matrices and multiplying them using matrix multiplication.
 
