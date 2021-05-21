@@ -37,6 +37,6 @@ and refactored those in functional and differentiable fashion:
 
 https://github.com/anhinga/julia-notebooks/tree/main/transition-to-flux
 
-and Flux/Zygote seem to work properly in this context.
+and Flux/Zygote seems to compute gradients properly in this context.
 
 _This is an active line of research, to be continued..._
