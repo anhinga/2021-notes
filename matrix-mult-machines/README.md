@@ -39,4 +39,8 @@ https://github.com/anhinga/julia-notebooks/tree/main/transition-to-flux
 
 and Flux/Zygote seems to compute gradients properly in this context.
 
+Here is the first machine learning study we have performed using this setup:
+
+https://github.com/anhinga/julia-notebooks/tree/main/flux-may-2021
+
 _This is an active line of research, to be continued..._
