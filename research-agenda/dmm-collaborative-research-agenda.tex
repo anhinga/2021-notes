@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-March 3, 2021\footnote{Version 2.2.2. Version 2.0 (08-07-20) is at
+July 8, 2021\footnote{Version 2.3. Version 2.0 (08-07-20) is at
 \href{https://github.com/anhinga/2020-notes/tree/master/research-agenda}
 {\tt https://github.com/anhinga/2020-notes/tree/master/research-agenda}}
 
@@ -464,7 +464,7 @@ and people who focus on DMMs will make this promise a reality.
 There are extremely interesting connections between DMMs and Transformers and other
 attention-based models. We started to make rough sketches exploring those connection available\footnote{\href
 {https://github.com/anhinga/2020-notes/tree/master/attention-based-models}
-{\tt https://github.com/anhinga/2020-notes/tree/master/attention-based-models}}, and
+{\tt https://github.com/anhinga/2020-notes/tree/master/attention-based-models}} beginning in July 2020, and
 we are going to add a brief summary here.
 
 Transformers are models with multi-layer attention mechanism which have been introduced 
@@ -500,10 +500,12 @@ this architecture: after initial pretraining the model's ability to learn new th
 
 These impressive capabilities were taken to an entirely new level with the introduction of GPT-3 and OpenAI API in
 May-June of this year\footnote{See, for example, my note at \href{https://www.cs.brandeis.edu/~bukatin/transformer\_revolution.html}{\tt https://www.cs.brandeis.edu/$\sim$bukatin/transformer\_revolution.html}}. I think the community is only at the beginning
-of the quest to understand why this architecture and especially its GPT-3 incarnation work so well\footnote{As of early August 2020 when I was writing this; the ``DMMs and Transformers" section of this document needs to be updated to reflect changes  since August 2020, including our own work.}.
+of the quest to understand why this architecture and especially its GPT-3 incarnation work so well\footnote{As of early August 2020 when I was writing this; the flood of Transformer-related literature and Transformer-related advances was rather overwhelming in the last year, and adequately monitoring
+and summarizing Transformer-related research has to be a group effort these days.}.
 
 It's quite promising at this point to consider interplay between attention-based models including Transformers and
-other approaches. Hybrid approaches of this kind can bring progress along multiple axes.
+other approaches. Hybrid approaches of this kind are bringing progress along multiple axes\footnote{For example,
+the AlphaFold 2 model is a hybrid model with attention-based elements playing some of the key roles.}.
 
 We started an exploration of connections between DMMs and Transformers in July 2020\footnote{\href
 {https://github.com/anhinga/2020-notes/tree/master/attention-based-models}
@@ -516,5 +518,21 @@ along two dimensions:
            and, in particular, could we obtain interesting compact and low training cost models by 
            incorporating attention-inspired and Transformer-inspired motives into DMMs?
 \end{itemize}
+
+In particular, we have been taking a closer look at the properties of matrix multiplication and at combining matrix multiplication and
+softmax together with other Transformer and DMM primitives to build small flexible neural machines. We have been exploring computational
+properties of those neural machines and solving selected machine learning problems involving those
+machines\footnote{\href {https://github.com/anhinga/2021-notes/tree/main/matrix-mult-machines}
+{\tt https://github.com/anhinga/2021-notes/tree/main/matrix-mult-machines}}.
+
+Some of our efforts in this direction will be presented as a virtual poster at the upcoming 
+JuliaCon 2021\footnote{Michael Bukatin.
+{\em Multiplying monochrome images as matrices: A*B and softmax.} 
+Upcoming virtual poster at JuliaCon 2021, July 2021. \href{https://github.com/anhinga/JuliaCon2021-poster}{\tt https://github.com/anhinga/JuliaCon2021-poster}}.
+
+The flexibility afforded by the latest generation of machine learning frameworks such as
+Julia Flux and JAX is extremely helpful and saves a lot of coding labor for people exploring these classes of problems.
+
+I believe this is an extremely promising direction and I advocate its further research and exploration.
 
 \end{document}
