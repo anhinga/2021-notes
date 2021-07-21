@@ -2,7 +2,7 @@
 
 ## History (2020 only on this page)
 
-In 2020, we studies relationships between DMMs and attention-based models including Transformers.
+In 2020, we studied relationships between DMMs and attention-based models including Transformers.
 
 See Section "DMMs and Transformers" of https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf
 
