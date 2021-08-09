@@ -9,11 +9,11 @@ are important.
 In particular, see these materials on **dictionaries with array-like interface** from JuliaCon 2021:
 
 Dictionaries.jl - for improved productivity and performance
-pretalx.com/juliacon2021/talk/WRNAEN/
+https://pretalx.com/juliacon2021/talk/WRNAEN/
 
-and live.juliacon.org/talk/WRNAEN (that is, www.youtube.com/watch?v=Y-hAZcqAw28)
+and https://live.juliacon.org/talk/WRNAEN (that is, https://www.youtube.com/watch?v=Y-hAZcqAw28)
 
-github.com/andyferris/Dictionaries.jl
+https://github.com/andyferris/Dictionaries.jl
 
 ---
 
