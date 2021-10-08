@@ -21,3 +21,15 @@ It is likely that this protocol would need to be repeated for every person wishi
 7 years later: it is very obvious that this was written before the start of deep learning revolution (Dec. 2012).
 
 In particular, consider all the emphasis on **feature extraction**, whereas today it is customary to let a deep neural net to figure out the right features on its own...
+
+### Oct 7, 2021 comment
+
+There is a nice library with a uniform API for a wide class of devices, and with bindings for a variety of programming languages including Julia:
+
+https://brainflow.org/
+
+https://brainflow.readthedocs.io/en/stable/
+
+https://github.com/brainflow-dev/brainflow/
+
+https://github.com/brainflow-dev/brainflow/tree/master/julia-package
