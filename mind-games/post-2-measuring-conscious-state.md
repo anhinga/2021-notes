@@ -33,3 +33,18 @@ https://brainflow.readthedocs.io/en/stable/
 https://github.com/brainflow-dev/brainflow/
 
 https://github.com/brainflow-dev/brainflow/tree/master/julia-package
+
+### Oct 20, 2021 comment
+
+What class of brain imaging devices such as EEGs is sufficient? 
+
+It is almost certain that a high-end EEG helmet is sufficient, see for example
+_Natural image reconstruction from brain waves: a novel visual BCI system with native feedback_,
+by Grigory Rashkov et al (2019): https://www.biorxiv.org/content/10.1101/787101v3
+
+If one can reconstuct images from an EEG recordings to the extent reported in this paper,
+one can be reasonably confident that sufficient information about all aspects of
+a congitive state of a person is transmitted.
+
+But would something close to an inexpensive wireless dry-contact few electrodes consumer EEG device
+such as **Muse** be sufficient for meaningful results? This remains to be seen.
