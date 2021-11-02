@@ -20,7 +20,7 @@
 
   * Use of the self-transforming capabilities to edit a running neural machine on the fly by sending it requests to self-edit (Clojure)
 
-### Fractal motives
+### Fractal motifs
 
   * Duplication of subgraphs of a running network
 
