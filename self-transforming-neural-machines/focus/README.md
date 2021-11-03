@@ -1,4 +1,4 @@
-### Current focus of the next interation of self-transforming neural machines study
+### Current focus of the next interation of my studies of self-transforming neural machines
 
 Generalize our experiments which edit a running network on the fly by sending it requests to edit itself;
 Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf).
