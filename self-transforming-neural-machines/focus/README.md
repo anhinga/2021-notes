@@ -7,7 +7,7 @@ _This enables live-coding, but this is also quite open-ended, since it enables a
 to modify themselves; of course, the receiving network doesn’t have to follow an incoming instruction
 to self-modify blindly, although in the most simple-minded case it would do so._
 
-Let's build upon this remark and actually conduct experiments in this style.
+Let's build upon this remark (which was made in the end of December 2019) and actually conduct experiments in this style.
 
 The following is included here for convenience:
 
