@@ -1,6 +1,6 @@
 # Background for self-transforming neural machines
 
-### Linear streams and V-values
+### Linear streams and V-values (2014-2017)
 
   * Linear streams: streams which can be combined with coefficients
 
