@@ -1,7 +1,7 @@
 ### Current focus of the next interation of self-transforming neural machines study
 
-Generalize our experiments which edit a running network on the fly by sending it requests to edit itself,
-Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf)
+Generalize our experiments which edit a running network on the fly by sending it requests to edit itself;
+Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf).
 
 _This enables live-coding, but this is also quite open-ended, since it enables a population of networks to tell each other
 to modify themselves; of course, the receiving network doesn’t have to follow an incoming instruction
