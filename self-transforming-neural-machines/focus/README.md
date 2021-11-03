@@ -1,6 +1,15 @@
 ### Current focus of the next interation of self-transforming neural machines study
 
+Generalize our experiments which edit a running network on the fly by sending it requests to edit itself,
+Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf)
 
+_This enables live-coding, but this is also quite open-ended, since it enables a population of networks to tell each other
+to modify themselves; of course, the receiving network doesn’t have to follow an incoming instruction
+to self-modify blindly, although in the most simple-minded case it would do so._
+
+Let's build upon this remark and actually conduct experiments in this style.
+
+The following is included here for convenience:
 
 ### Section 3, Self-modification, learning to learn, and neuroevolution, of Dataflow Matrix Machines: a Collaborative Research Agenda, https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf
 
@@ -34,4 +43,4 @@ In our software experiments, we used self-modification facilities to
     but this is also quite open-ended, since it enables a population of networks to tell each other
     to modify themselves; of course, the receiving network doesn’t have to follow an incoming instruction
     to self-modify blindly, although in the most simple-minded case it would do so; see Section 1.1 of our
-    11-2018 technical report, [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf).
+    11-2018 technical report, [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf)).
