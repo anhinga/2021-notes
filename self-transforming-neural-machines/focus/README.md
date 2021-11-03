@@ -7,7 +7,7 @@
 Using neural networks for metalearning is always non-trivial. In particular, dimension mismatch, namely
 the number of neuron outputs being much smaller than the number of network weights, means that a neural
 network can only modify itself in a highly constrained manner. Dataflow matrix machines address this problem
-and have powerful and flexible self-modification facilities.
+and have **powerful and flexible self-modification facilities**.
 
 Therefore, a dataflow matrix machine can be equipped with a variety of primitives which perform self-modifications, 
 and it can fruitfully learn various linear combinations and compositions involving those primitives.
@@ -28,10 +28,10 @@ In our software experiments, we used self-modification facilities to
 
   * produce controlled wave patterns in the network matrix (see Appendix B.2 of our LearnAut 2017 paper, https://arxiv.org/abs/1706.00648);
   
-  * create randomly initialized self-referential DMMs which generated interesting emerging behaviors (see Section 1.2 of our 11-2018 technical report, dmm-notes-2018.pdf);
+  * create randomly initialized self-referential DMMs which generated interesting emerging behaviors (see Section 1.2 of our 11-2018 technical report, [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf));
 
   * edit a running network on the fly by sending it requests to edit itself (in particular, this enables live-coding, 
     but this is also quite open-ended, since it enables a population of networks to tell each other
     to modify themselves; of course, the receiving network doesn’t have to follow an incoming instruction
     to self-modify blindly, although in the most simple-minded case it would do so; see Section 1.1 of our
-    11-2018 technical report, dmm-notes-2018.
+    11-2018 technical report, [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf).
