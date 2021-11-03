@@ -1,8 +1,14 @@
 # Background for self-transforming neural machines
 
+### Linear streams and V-values
+
+  * Linear streams: streams which can be combined with coefficients
+
+  * V-values: tree-shaped "flexible tensors"
+
 ### Three views on dataflow matrix machines (2015-2020)
 
-  * Continuously deformable stream-oriented progams working with linear streams (streams which can be combined with coefficients)
+  * Continuously deformable stream-oriented progams working with linear streams 
 
   * Generalized recurrent neural networks working with linear streams instead of streams of numbers
 
