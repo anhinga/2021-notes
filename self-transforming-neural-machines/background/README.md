@@ -6,7 +6,7 @@
 
   * V-values: tree-shaped "flexible tensors"
 
-### Three views on dataflow matrix machines (2015-2020)
+### [Three views on dataflow matrix machines (2015-2020)](https://github.com/anhinga/2021-notes/blob/main/self-transforming-neural-machines/background/three-views.md)
 
   * Continuously deformable stream-oriented progams working with linear streams 
 
