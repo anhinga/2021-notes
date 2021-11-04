@@ -2,13 +2,13 @@
 
 ### Continuously deformable stream-oriented progams working with linear streams
   
-This is the orginal view. This is why dataflow matrix machines were invented in 2014-2015.
+  * This is the orginal view. This is why dataflow matrix machines were invented in 2014-2015.
 
-  * 2016: _Programming Patterns in Dataflow Matrix Machines and Generalized Recurrent Neural Nets_, https://arxiv.org/abs/1606.09470
+    * 2016: _Programming Patterns in Dataflow Matrix Machines and Generalized Recurrent Neural Nets_, https://arxiv.org/abs/1606.09470
 
-  * 2017: _Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_ (Sections 6 and 11.2), https://arxiv.org/abs/1712.07447
+    * 2017: _Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_ (Sections 6 and 11.2), https://arxiv.org/abs/1712.07447
 
-  * 2020: [Map of DMM-related programming examples and techniques](https://github.com/anhinga/2020-notes/tree/master/programming-overview)
+    * 2020: [Map of DMM-related programming examples and techniques](https://github.com/anhinga/2020-notes/tree/master/programming-overview)
 
 ### Generalized recurrent neural networks working with linear streams instead of streams of numbers
 
@@ -26,16 +26,18 @@ This is the orginal view. This is why dataflow matrix machines were invented in 
 
 ### "Super-transformers": each input of a super-neuron in a dataflow matrix machine is an attention device combining incoming linear streams together
 
-2020-2021: Section 11, _DMMs and Transformers_, of [_Dataflow Matrix Machines: a Collaborative Research Agenda_](https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf)
+  * Materials
 
-Follow links from the footnotes of Section 11, _DMMs and Transformers_, for more details.
+    * 2020-2021: Section 11, _DMMs and Transformers_, of [_Dataflow Matrix Machines: a Collaborative Research Agenda_](https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf)
 
-An informal outlook: 
+    * Follow links from the footnotes of Section 11, _DMMs and Transformers_, for more details.
 
-[Comment on the simple-minded pragmatic attention ("content-based neural attention")](https://github.com/anhinga/2020-notes/blob/master/attention-based-models/simple-minded-attention.md)
+  * An informal outlook: 
 
-An even more informal outlook:
+    * [Comment on the simple-minded pragmatic attention ("content-based neural attention")](https://github.com/anhinga/2020-notes/blob/master/attention-based-models/simple-minded-attention.md)
 
-Every input of a super-neuron combining linear streams together with coefficients uses attention to create a combined local reality from separate local realities of incoming streams.
+  * An even more informal outlook:
 
-Then the built-in "activation function" of the super-neuron combined local realities of all its inputs and transforms them to produce a set of output local realities to be sent to other super-neurons in the network.
+    * Every input of a super-neuron combining linear streams together with coefficients uses attention to create a combined local reality from separate local realities of incoming streams.
+
+    * Then the built-in "activation function" of the super-neuron combined local realities of all its inputs and transforms them to produce a set of output local realities to be sent to other super-neurons in the network.
