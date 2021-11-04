@@ -12,4 +12,16 @@ This is the orginal view. This is why dataflow matrix machines were invented in 
 
 ### Generalized recurrent neural networks working with linear streams instead of streams of numbers
 
+Origin (2016):
+
+_Dataflow Matrix Machines as a Generalization of Recurrent Neural Networks_, https://arxiv.org/abs/1603.09002
+
+_Dataflow matrix machines as programmable, dynamically expandable, self-referential generalized recurrent neural networks_, https://arxiv.org/abs/1605.05296
+
+Overview (2017):
+
+_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_ (Sections 2, 4, 8, 9, 11.1), https://arxiv.org/abs/1712.07447
+
+[Slides](https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf)
+
 ### "Super-transformers": each input of a super-neuron in a dataflow matrix machine is an attention device combining incoming linear streams together
