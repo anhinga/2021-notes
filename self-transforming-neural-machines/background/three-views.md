@@ -22,6 +22,6 @@ Overview (2017):
 
 _Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_ (Sections 2, 4, 8, 9, 11.1), https://arxiv.org/abs/1712.07447
 
-[Slides](https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf)
+[Slides (IBM AI Systems Day)](https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf)
 
 ### "Super-transformers": each input of a super-neuron in a dataflow matrix machine is an attention device combining incoming linear streams together
