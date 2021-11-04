@@ -18,7 +18,7 @@ _Dataflow Matrix Machines as a Generalization of Recurrent Neural Networks_, htt
 
 _Dataflow matrix machines as programmable, dynamically expandable, self-referential generalized recurrent neural networks_, https://arxiv.org/abs/1605.05296
 
-Overview (2017):
+Overview (2017-2018):
 
 _Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_ (Sections 2, 4, 8, 9, 11.1), https://arxiv.org/abs/1712.07447
 
