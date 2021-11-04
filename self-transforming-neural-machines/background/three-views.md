@@ -31,3 +31,11 @@ _Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Net
 Follow links from the footnotes of Section 11, _DMMs and Transformers_, for more details.
 
 An informal outlook: 
+
+[Comment on the simple-minded pragmatic attention ("content-based neural attention")](https://github.com/anhinga/2020-notes/blob/master/attention-based-models/simple-minded-attention.md)
+
+An even more informal outlook:
+
+
+
+
