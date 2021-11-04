@@ -40,4 +40,4 @@
 
     * Every input of a super-neuron combines linear streams together with coefficients: that is, each input of a super-neuron uses attention to create a combined local reality from separate local realities of incoming streams.
 
-    * Then the built-in "activation function" of the super-neuron takes combined local realities of all its inputs and transforms them to produce a set of output local realities to be sent to other super-neurons in the network.
+    * Then the built-in "activation function" of the super-neuron takes all combined local realities of its inputs and transforms them to produce a set of output local realities to be sent to other super-neurons in the network.
