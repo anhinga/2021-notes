@@ -26,4 +26,4 @@ _Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Net
 
 ### "Super-transformers": each input of a super-neuron in a dataflow matrix machine is an attention device combining incoming linear streams together
 
-2020-2021: Section 11, _DMMs and Transformers_ of [_Dataflow Matrix Machines: a Collaborative Research Agenda_](https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf)
+2020-2021: Section 11, _DMMs and Transformers_, of [_Dataflow Matrix Machines: a Collaborative Research Agenda_](https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf)
