@@ -1,4 +1,4 @@
-## Basics
+# Basics of self-modifying neural machines
 
 Neural machines work by repeating a two-stroke cycle. 
 The inner mechanisms of neurons work during the first phase of the cycle.
@@ -43,7 +43,7 @@ this neuron stops being silent and is no longer just an abstract entity, but
 it gets allocated in the memory, and computational resources are now spent on
 computing its inputs and outputs. Such neuron is called _active_.
 
-## A simple scenario for self-expansion
+# A simple scenario for self-expansion
 
 We start with two active neurons and with the connectivity matrix containing
 two non-zero elements.
@@ -60,4 +60,16 @@ together creating a new connectivity matrix.
 
 What is happening under this scenario depends on the specific
 updates to the connectivity matrix emitted by the neuron _Update_.
+
+When the connectivity matrix emitted by _Self_ contains new non-zero
+elements, more neurons become active as necessary.
+
+### Live-coding scenario
+
+In the livecoding scenario, the _Update_ neuron listens for matrix
+updates on an asynchronous channel. If it does not hear anything,
+it emits zero value corresponding to "no update" action. If it receives
+an update for the network connectivity matrix, it passes this update
+to _Self_ to be incorporated into the connectivity matrix.
+
 
