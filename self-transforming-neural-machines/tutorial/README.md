@@ -89,6 +89,13 @@ inputs and producing a dictionary containing all outputs.
 
 Figure 4 of Section 4, _Variadic Neurons_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
+When one has unlimited number of inputs and outputs, it is convenient for them to
+have the same shape, and so one would like to pick a sufficiently universal shape to
+cover a variety of needs.
+
+We choose nested dictionaries with numbers at their leaves, and we call them V-values,
+for "vector-like values" and as a homage for S-expressions.
+
 ![v-value](v-value.png)
 
 Figure 3 of Section 3, _V-values_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
