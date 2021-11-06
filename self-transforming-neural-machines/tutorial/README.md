@@ -72,4 +72,19 @@ it emits zero value corresponding to "no update" action. If it receives
 an update for the network connectivity matrix, it passes this update
 to _Self_ to be incorporated into the connectivity matrix.
 
+# V-values and variadic neurons
 
+# We cheated a bit
+
+We said:
+
+"Neural machines work by repeating a two-stroke cycle. 
+The inner mechanisms of neurons work during the first phase of the cycle.
+Then the network connectivity matrix remixes the neuron outputs with weights
+and creates neuron inputs for the next cycle during the second phase of the cycle."
+
+In reality, it is convenient to start with the second phase: one sets up the
+connectivity matrix (and other initial neuron outputs if necessary; the
+_neurons without their own inputs serve as the inputs to the whole network_),
+and performs the second phase, then invokes the inner mechanisms of neurons
+(the first phase).
