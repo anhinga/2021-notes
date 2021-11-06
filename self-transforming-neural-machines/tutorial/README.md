@@ -84,7 +84,6 @@ Then the network connectivity matrix remixes the neuron outputs with weights
 and creates neuron inputs for the next cycle during the second phase of the cycle."
 
 In reality, it is convenient to start with the second phase: one sets up the
-connectivity matrix (and other initial neuron outputs if necessary; the
-_neurons without their own inputs serve as the inputs to the whole network_),
+connectivity matrix (and all initial neuron outputs as necessary),
 and performs the second phase, then invokes the inner mechanisms of neurons
-(the first phase).
+(the first phase). 
