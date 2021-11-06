@@ -78,7 +78,7 @@ Our experiments which edit a running network on the fly by sending it requests t
 Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf)
 use streams of V-values and variadic neurons.
 
-![variadic](variadic.jpg)
+![variadic](variadic.png)
 
 _to be continued_
 
