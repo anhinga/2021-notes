@@ -74,9 +74,15 @@ to _Self_ to be incorporated into the connectivity matrix.
 
 # V-values and variadic neurons
 
+Our experiments which edit a running network on the fly by sending it requests to edit itself;
+Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf)
+use streams of V-values and variadic neurons.
+
+_to be continued__
+
 # We cheated a bit
 
-We said:
+We said in the beginning:
 
 "Neural machines work by repeating a two-stroke cycle. 
 The inner mechanisms of neurons work during the first phase of the cycle.
