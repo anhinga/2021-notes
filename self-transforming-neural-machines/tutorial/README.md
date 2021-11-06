@@ -41,5 +41,23 @@ an inherently sparse matrix).
 When a neuron acquires a non-zero connection within the connectivity matrix,
 this neuron stops being silent and is no longer just an abstract entity, but
 it gets allocated in the memory, and computational resources are now spent on
-computing its inputs and outputs.
+computing its inputs and outputs. Such neuron is called _active_.
+
+## A simple scenario for self-expansion
+
+We start with two active neurons and with the connectivity matrix containing
+two non-zero elements.
+
+One of this active neurons is _Self_, and one of the two non-zero elements
+of the connectivity matrix is weight 1, connecting the output of _Self_ to one of its inputs.
+
+Another active neuron is _Update_, and the second non-zero element of
+the connectivity matrix is weight 1, connecting the output of _Update_
+to one of the inputs of _Self_.
+
+During the first phase of the two-stroke cycle, _Self_ combines its inputs
+together creating a new connectivity matrix.
+
+What is happening under this scenario depends on the specific
+updates to the connectivity matrix emitted by the neuron _Update_.
 
