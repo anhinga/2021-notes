@@ -27,3 +27,19 @@ accepting updates to its value from other neurons in the network.
 
 This is not mandatory, one can imagine different arrangements. But this is how we
 were doing things in our 2016-2018 experiments.
+
+### Unlimited dynamic self-expansion
+
+In some of our experiments we allowed unlimited dynamics self-expansion of the network.
+
+To do this one imagines having "an ambient infinite collection of silent neurons
+which don't take any memory or computational resources, but only exist as abstract
+entities in the infinite address space". Under this approach, the connectivity matrix
+is infinite, but it contains only a finite number of non-zero elements (so this is
+an inherently sparse matrix).
+
+When a neuron acquires a non-zero connection within the connectivity matrix,
+this neuron stops being silent and is no longer just an abstract entity, but
+it gets allocated in the memory, and computational resources are now spent on
+computing its inputs and outputs.
+
