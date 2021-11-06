@@ -89,7 +89,9 @@ inputs and producing a dictionary containing all outputs.
 
 Figure 4 of Section 4, _Variadic Neurons_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
+![v-value](v-value.png)
 
+Figure 3 of Section 3, _V-values_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
 _to be continued_
 
