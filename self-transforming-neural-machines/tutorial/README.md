@@ -78,7 +78,18 @@ Our experiments which edit a running network on the fly by sending it requests t
 Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf)
 use streams of V-values and variadic neurons.
 
+Standard neural net neurons have one output and one input (accumulating one linear combination
+of the output of other neurons). It is often convenient to have more that one input and one
+output (e.g. one might want a neuron to multiply two inputs, or one might want a neuron to
+produce a couple of complementary outputs). We decided that it would be most convenient to
+have an unlimited number of inputs and outputs. To achieve that, we consider neurons processing a dictionary containing all
+inputs and producing a dictionary containing all outputs.
+
 ![variadic](variadic.png)
+
+Figure 4 of Section 4, _Variadic Neurons_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
+
+
 
 _to be continued_
 
