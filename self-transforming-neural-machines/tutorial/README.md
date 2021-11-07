@@ -25,6 +25,10 @@ We usually connect the output of _Self_ containing the connectivity matrix with 
 its inputs with weight 1. This way _Self_ accumulates the connectivity matrix while
 accepting updates to its value from other neurons in the network.
 
+![accum](accum.png)
+
+Figure 5, _Accumulator of updates_, of Section 6 of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
+
 This is not mandatory, one can imagine different arrangements. But this is how we
 were doing things in our 2016-2018 experiments.
 
