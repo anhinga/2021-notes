@@ -98,8 +98,8 @@ inputs and producing a dictionary containing all outputs.
 
 Figure 4 in Section 4, _Variadic Neurons_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
-When one has unlimited number of inputs and outputs, it is convenient for them to
-have the same shape, and so one would like to pick a sufficiently universal shape to
+When one has unlimited number of inputs and outputs, it is convenient for all those inputs and outputs to be of the same kind, 
+and so one would like to pick a sufficiently universal kind to
 cover a variety of needs.
 
 We choose nested dictionaries with numbers as their final values, that is, we choose
@@ -110,9 +110,15 @@ as a shorthand for "vector-like values" and as a homage for S-expressions.
 
 Figure 3 in Section 3, _V-values_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
+This way all inputs of a neuron can be combined into a single V-value, and all outputs of a neuron
+can be combined into a single V-value, and so the inner mechanism of a variadic neuron transforms
+a single V-value into a single V-value. The "activation function" of a variadic neuron takes
+a V-value as its argument and produces a V-value as its result. The actual inputs and outputs of the neuron
+are the first-level subtrees of those V-values.
+
 V-values are very flexible and serve various needs (convenient data structures for programming, hierarchies, and so on).
 
-In particular, they contain all conventional tensor. The leaves on the first level of the tree can
+In particular, they contain all conventional tensors. The leaves on the first level of the tree can
 be considered to be elements of a sparse vector, the leaves on the second level of the tree can
 be considered to be elements of a sparse matrix (a sparse tensor of rank two),
 the leaves on the third level of the tree can be considered to be elements of
