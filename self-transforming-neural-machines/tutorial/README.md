@@ -150,6 +150,37 @@ so the active part of the network is expanded to include _Test-Image_. Then we s
 `:to-test-image IMAGE-DATA` to the _Update_ neuron, and this leads to `IMAGE-DATA` being send
 to the `:delta` input of the _Test-Image_ neuron and being stored in the _Test-Image_ accumulator.
 
+It is somewhat more difficult and less intuitive than I'd like it to be. All these experiments involving
+live-coding with variadic neurons are recorded here
+
+https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive
+
+and the particular experiment with the _Test-Image_ neuron is recorded here:
+
+https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/interactive/comment_to_april_2018_experiments.md
+
+---
+
+The `nu-general` function which sends data to update the network using 
+arbitrary output of the update neuron is useful in this context.
+Different outputs can be connected to different accumulator neurons, e.g.
+
+`(nu [v-accum :test-image :accum] [v-accum :test-image :single] 1)`
+
+`(nu [v-accum :test-image :delta] [v-network-update-monitor :network-interactive-updater :to-test-image] 1)`
+
+`(nu-general :test-image :to-test-image)`
+
+Here we use `:to-test-image` output of the update neuron, whereas the `nu` function
+uses `:direct` output of the update neuron.
+
+---
+
+I'd like to ponder how to make this more transparent and intuitive, and also more general, returning to this new
+December 2019 remark and making it a goal for the next iteration of this project:
+
+_This enables live-coding, but this is also quite open-ended, since it enables a population of networks to tell each other to modify themselves; of course, the receiving network doesn’t have to follow an incoming instruction to self-modify blindly, although in the most simple-minded case it would do so._
+
 ## We cheated a bit
 
 We said in the beginning:
