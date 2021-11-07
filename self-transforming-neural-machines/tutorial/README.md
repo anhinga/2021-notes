@@ -29,8 +29,10 @@ accepting updates to its value from other neurons in the network.
 
 Figure 5, _Accumulator of updates_, in Section 6 of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
-This is not mandatory, one can imagine different arrangements. But this is how we
-were doing things in our 2016-2018 experiments.
+This is not mandatory (in principle, one can imagine different arrangements, where _Self_ is not an accumulator, but something else,
+and if some accumulation is needed it is always possible to situate it upstream of _Self_). 
+
+But we were using "_Self_ as an accumulator" pattern in our 2016-2018 experiments.
 
 ### Unlimited dynamic self-expansion
 
@@ -97,8 +99,9 @@ When one has unlimited number of inputs and outputs, it is convenient for them t
 have the same shape, and so one would like to pick a sufficiently universal shape to
 cover a variety of needs.
 
-We choose nested dictionaries with numbers at their leaves, and we call them V-values,
-for "vector-like values" and as a homage for S-expressions.
+We choose nested dictionaries with numbers as their final values, that is, we choose
+trees with numerical leaves, and we call them V-values,
+as a shorthand for "vector-like values" and as a homage for S-expressions.
 
 ![v-value](v-value.png)
 
