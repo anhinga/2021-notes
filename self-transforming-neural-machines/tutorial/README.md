@@ -194,3 +194,12 @@ In reality, it is convenient to start with the second phase: one sets up the
 connectivity matrix (and all initial neuron outputs as necessary),
 and performs the second phase, then invokes the inner mechanisms of neurons
 (the first phase). 
+
+The reason for this is two-fold. First, we would like to be able to have neurons without
+neural inputs, and we would like to be able to initialize their outputs (which can be
+used as constant data). More importantly, the network matrix determines which neurons are
+active in the setup allowing for dynamic self-expansion. And so, we need to know the
+network matrix before knowing which neurons are active and thus need to perform their
+internal computations. So one starts with knowing the network matrix and all the neuron
+outputs, applies the network matrix to the set of neuron outputs to obtain all the neuron
+inputs, and only then the internal computations of active neurons get invoked.
