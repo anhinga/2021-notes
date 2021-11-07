@@ -27,7 +27,7 @@ accepting updates to its value from other neurons in the network.
 
 ![accum](accum.png)
 
-Figure 5, _Accumulator of updates_, of Section 6 of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
+Figure 5, _Accumulator of updates_, in Section 6 of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
 This is not mandatory, one can imagine different arrangements. But this is how we
 were doing things in our 2016-2018 experiments.
@@ -91,7 +91,7 @@ inputs and producing a dictionary containing all outputs.
 
 ![variadic](variadic.png)
 
-Figure 4 of Section 4, _Variadic Neurons_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
+Figure 4 in Section 4, _Variadic Neurons_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
 When one has unlimited number of inputs and outputs, it is convenient for them to
 have the same shape, and so one would like to pick a sufficiently universal shape to
@@ -102,7 +102,7 @@ for "vector-like values" and as a homage for S-expressions.
 
 ![v-value](v-value.png)
 
-Figure 3 of Section 3, _V-values_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
+Figure 3 in Section 3, _V-values_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
 _to be continued_
 
