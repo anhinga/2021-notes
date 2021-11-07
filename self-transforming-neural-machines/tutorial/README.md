@@ -1,4 +1,6 @@
-# Basics of self-modifying neural machines
+# Tutorial on self-transforming neural machines
+
+## Basics of self-modifying neural machines
 
 Neural machines work by repeating a two-stroke cycle. 
 The inner mechanisms of neurons work during the first phase of the cycle.
@@ -29,27 +31,28 @@ accepting updates to its value from other neurons in the network.
 
 Figure 5, _Accumulator of updates_, in Section 6 of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
-This is not mandatory (in principle, one can imagine different arrangements, where _Self_ is not an accumulator, but something else,
+The "_Self_ as an accumulator" pattern is not the mandatory  (in principle, one can imagine different arrangements, 
+where _Self_ is not an accumulator, but something else,
 and if some accumulation is needed it is always possible to situate it upstream of _Self_). 
 
 But we were using "_Self_ as an accumulator" pattern in our 2016-2018 experiments.
 
 ### Unlimited dynamic self-expansion
 
-In some of our experiments we allowed unlimited dynamics self-expansion of the network.
+In some of our experiments we allowed unlimited dynamic self-expansion of the network.
 
 To do this one imagines having "an ambient infinite collection of silent neurons
 which don't take any memory or computational resources, but only exist as abstract
 entities in the infinite address space". Under this approach, the connectivity matrix
-is infinite, but it contains only a finite number of non-zero elements (so this is
+is infinite, but it contains only a finite number of non-zero elements (so the connectivity matrix becomes
 an inherently sparse matrix).
 
 When a neuron acquires a non-zero connection within the connectivity matrix,
 this neuron stops being silent and is no longer just an abstract entity, but
-it gets allocated in the memory, and computational resources are now spent on
+it gets allocated in the computer memory, and computational resources are now spent on
 computing its inputs and outputs. Such neuron is called _active_.
 
-# A simple scenario for self-expansion
+## A simple scenario for self-expansion
 
 We start with two active neurons and with the connectivity matrix containing
 two non-zero elements.
@@ -78,7 +81,7 @@ it emits zero value corresponding to "no update" action. If it receives
 an update for the network connectivity matrix, it passes this update
 to _Self_ to be incorporated into the connectivity matrix.
 
-# V-values and variadic neurons
+## V-values and variadic neurons
 
 Our experiments which edit a running network on the fly by sending it requests to edit itself;
 Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf)
@@ -107,9 +110,24 @@ as a shorthand for "vector-like values" and as a homage for S-expressions.
 
 Figure 3 in Section 3, _V-values_, of https://arxiv.org/abs/1712.07447 (_Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets_).
 
+V-values are very flexible and serve various needs (convenient data structures for programming, hierarchies, and so on).
+
+In particular, they contain all conventional tensor. The leaves on the first level of the tree can
+be considered to be elements of a sparse vector, the leaves on the second level of the tree can
+be considered to be elements of a sparse matrix (a sparse tensor of rank two),
+the leaves on the third level of the tree can be considered to be elements of
+a sparse tensor of rank three, etc.
+
+For technical reasons, with variadic neurons it is often convenient to express "network connectivity matrix"
+not as a usual tensor of rank 2, but as a tensor of a higher rank (because it is often convenient to
+allow hierarchical indices of rows and columns). V-values are expressive enough to easily provide
+this functionality.
+
+### Live-coding with V-values and variadic neurons
+
 _to be continued_
 
-# We cheated a bit
+## We cheated a bit
 
 We said in the beginning:
 
