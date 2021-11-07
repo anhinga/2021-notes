@@ -131,7 +131,24 @@ this functionality.
 
 ### Live-coding with V-values and variadic neurons
 
-_to be continued_
+With variadic neurons, it is convenient to use the _Update_ neuron to inject changes into multiple
+places in the network.
+
+For example, our experiments which edit a running network on the fly by sending it requests to edit itself,
+Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf), start with
+the direct `:direct` output of the _Update_ neuron connected to the `:delta` input of the _Self_ neuron.
+
+Then we can use this connection from _Update_.`output:direct` to _Self_.`input:delta` to edit the network 
+connectivity matrix and link some other outputs of the _Update_ neuron to other inputs in the network.
+
+For example, in that particular experiment we link `:to-test-image` output of the _Update_ neuron
+to the `:delta` input of the _Test-Image_ neuron. We also link one of the outputs of the
+_Test-Image_ neuron to one of its inputs with weight 1 making it an accumulator.
+
+This interactive change of the connectivity matrix of the running network makes the _Test-Image_ neuron active,
+so the active part of the network is expanded to include _Test-Image_. Then we send 
+`:to-test-image IMAGE-DATA` to the _Update_ neuron, and this leads to `IMAGE-DATA` being send
+to the `:delta` input of the _Test-Image_ neuron and being stored in the _Test-Image_ accumulator.
 
 ## We cheated a bit
 
