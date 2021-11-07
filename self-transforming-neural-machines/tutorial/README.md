@@ -88,10 +88,10 @@ Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-not
 use streams of V-values and variadic neurons.
 
 Standard neural net neurons have one output and one input (accumulating one linear combination
-of the output of other neurons). It is often convenient to have more that one input and one
+of the outputs of other neurons). It is often convenient to have more that one input and one
 output (e.g. one might want a neuron to multiply two inputs, or one might want a neuron to
 produce a couple of complementary outputs). We decided that it would be most convenient to
-have an unlimited number of inputs and outputs. To achieve that, we consider neurons processing a dictionary containing all
+have an unlimited number of inputs and outputs per each neuron. To achieve that, we consider neurons processing a dictionary containing all
 inputs and producing a dictionary containing all outputs.
 
 ![variadic](variadic.png)
@@ -126,7 +126,7 @@ a sparse tensor of rank three, etc.
 
 For technical reasons, with variadic neurons it is often convenient to express "network connectivity matrix"
 not as a usual tensor of rank 2, but as a tensor of a higher rank (because it is often convenient to
-allow hierarchical indices of rows and columns). V-values are expressive enough to easily provide
+allow hierarchical indices of rows and columns of a matrix). V-values are expressive enough to easily provide
 this functionality.
 
 ### Live-coding with V-values and variadic neurons
@@ -136,7 +136,7 @@ places in the network.
 
 For example, our experiments which edit a running network on the fly by sending it requests to edit itself,
 Section 1.1 of our [dmm-notes-2018](https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf), start with
-the direct `:direct` output of the _Update_ neuron connected to the `:delta` input of the _Self_ neuron.
+the dedicated `:direct` output of the _Update_ neuron connected to the `:delta` input of the _Self_ neuron.
 
 Then we can use this connection from _Update_.`output:direct` to _Self_.`input:delta` to edit the network 
 connectivity matrix and link some other outputs of the _Update_ neuron to other inputs in the network.
