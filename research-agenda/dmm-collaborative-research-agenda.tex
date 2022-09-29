@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-April 2, 2022\footnote{Version 2.3.1. Version 2.0 (08-07-20) is at
+September 28, 2022\footnote{Version 2.4. Version 2.0 (08-07-20) is at
 \href{https://github.com/anhinga/2020-notes/tree/master/research-agenda}
 {\tt https://github.com/anhinga/2020-notes/tree/master/research-agenda}}
 
@@ -168,6 +168,10 @@ Dataflow matrix machines allow us  to combine
       \item aspects of {\em program synthesis} setup\\ (compact, human-readable programs);
       \item aspects of {\em program inference} setup\\ (continuous models defined by matrices).
   \end{itemize}
+
+First successful experiments in program synthesis/circuit synthesis/DMM synthesis via neural architecture search
+were performed in June 2022\footnote{See {\tt history.md} at
+\href{https://github.com/anhinga/DMM-synthesis-lab-journal}{\tt https://github.com/anhinga/DMM-synthesis-lab-journal}}.
 
 \section{Self-modification, learning to learn, and neuroevolution} \label{sec:selfref}
 
@@ -337,6 +341,15 @@ machine learning platforms such as Julia Flux or JAX see our preliminary researc
 draft\footnote{Michael Bukatin, {\em Dataflow matrix machines, tree-shaped flexible tensors, neural architecture search, 
 and PyTorch}, January 2021. \href{https://github.com/anhinga/2021-notes/tree/main/research-drafts}
 {\tt https://github.com/anhinga/2021-notes/tree/main/research-drafts}} . 
+
+JAX and Zygote.jl (Julia Flux) are capable of taking gradients with respect to variables stored inside 
+nested dictionaries\footnote{See \href{https://github.com/anhinga/jax-pytree-example}{\tt https://github.com/anhinga/jax-pytree-example}
+and\\ \href{https://github.com/anhinga/julia-flux-drafts/tree/main/arxiv-1606-09470-section3}
+{\tt https://github.com/anhinga/julia-flux-drafts/tree/main/arxiv-1606-09470-section3}}.
+
+First successful experiments in DMM training and in program synthesis/circuit synthesis/DMM synthesis via neural architecture search
+were performed in June 2022 using Zygote.jl\footnote{See {\tt history.md} at
+\href{https://github.com/anhinga/DMM-synthesis-lab-journal}{\tt https://github.com/anhinga/DMM-synthesis-lab-journal}}.
 
 \section{DMMs vs. differentiable programming: a meta-learning aspect}
 
