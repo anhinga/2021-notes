@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-March 17, 2021 - April 2, 2022
+March 17, 2021 - September 28, 2022
 \end{center}
 
 
@@ -93,12 +93,23 @@ The situation is much more favorable now with
 the availability of modern ultra-flexible frameworks for differentiable programming such as Julia Flux or JAX,
 which seem to fit DMMs quite well.
 
+\subsection{Current Status}
+
+JAX and Zygote.jl (Julia Flux) are capable of taking gradients with respect to variables stored inside 
+nested dictionaries\footnote{See \href{https://github.com/anhinga/jax-pytree-example}{\tt https://github.com/anhinga/jax-pytree-example}
+and\\ \href{https://github.com/anhinga/julia-flux-drafts/tree/main/arxiv-1606-09470-section3}
+{\tt https://github.com/anhinga/julia-flux-drafts/tree/main/arxiv-1606-09470-section3}}.
+
+First successful experiments in DMM training and in program synthesis/circuit synthesis/DMM synthesis via neural architecture search
+were performed in June 2022 using Zygote.jl. The synthesized DMMs had pretty impressive generalization properties.\footnote{See {\tt history.md} at
+\href{https://github.com/anhinga/DMM-synthesis-lab-journal}{\tt https://github.com/anhinga/DMM-synthesis-lab-journal}}.
+
 \section{Choice of Applications}
 
 We maintain a list of open problems and promising directions of research related to 
-DMMs\footnote{Michael Bukatin. {\em Dataflow Matrix Machines:  a Collaborative Research Agenda}, April 2022.\\
-\href{https://www.cs.brandeis.edu/~bukatin/dmm-collaborative-research-agenda.pdf}
-{\tt https://www.cs.brandeis.edu/$\sim$bukatin/dmm-collaborative-research-agenda.pdf}} in order to facilitate potential
+DMMs\footnote{Michael Bukatin. {\em Dataflow Matrix Machines:  a Collaborative Research Agenda}, September 2022.\\
+\href{https://anhinga.github.io/brandeis-mirror/dmm-collaborative-research-agenda.pdf}
+{\tt https://anhinga.github.io/brandeis-mirror/dmm-collaborative-research-agenda.pdf}} in order to facilitate potential
 interdisciplinary collaborations. I am including the first three
 sections from that list verbatim as an appendix. 
 
@@ -213,6 +224,10 @@ Dataflow matrix machines allow us  to combine
       \item aspects of {\em program synthesis} setup\\ (compact, human-readable programs);
       \item aspects of {\em program inference} setup\\ (continuous models defined by matrices).
   \end{itemize}
+
+First successful experiments in program synthesis/circuit synthesis/DMM synthesis via neural architecture search
+were performed in June 2022\footnote{See {\tt history.md} at
+\href{https://github.com/anhinga/DMM-synthesis-lab-journal}{\tt https://github.com/anhinga/DMM-synthesis-lab-journal}}.
 
 \subsection{Self-modification, learning to learn, and neuroevolution} \label{sec:selfref}
 
