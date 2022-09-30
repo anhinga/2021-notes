@@ -23,4 +23,4 @@ File updated to fix a broken link.
 
 PDF files:
   * March 2021 - in this directory
-  * April 2022 - linked from https://www.cs.brandeis.edu/~bukatin/dmm_next.html
+  * September 2022 - https://anhinga.github.io/brandeis-mirror/towards-practical-dmms.pdf
