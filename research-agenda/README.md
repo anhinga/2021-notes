@@ -4,10 +4,6 @@ The PDF file of Version 2.4 is at
 
 https://anhinga.github.io/brandeis-mirror/dmm-collaborative-research-agenda.pdf
 
-The PDF file of Version 2.3.1 is at
-
-https://www.cs.brandeis.edu/~bukatin/dmm_next.html
-
 Abstract:
 
   * Dataflow matrix machines form a quintessential interdisciplinary field. 
