@@ -42,9 +42,9 @@ It is almost certain that a high-end EEG helmet is sufficient, see for example
 _Natural image reconstruction from brain waves: a novel visual BCI system with native feedback_,
 by Grigory Rashkov et al (2019): https://www.biorxiv.org/content/10.1101/787101v3
 
-If one can reconstuct images from an EEG recordings to the extent reported in this paper,
+If one can reconstruct images from an EEG recording to the extent reported in this paper,
 one can be reasonably confident that sufficient information about all aspects of
-a congitive state of a person is transmitted.
+a cognitive state of a person is transmitted.
 
 But would something close to an inexpensive wireless dry-contact few electrodes consumer EEG device
 such as **Muse** be sufficient for meaningful results? This remains to be seen.
