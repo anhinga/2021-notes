@@ -48,3 +48,9 @@ a cognitive state of a person is transmitted.
 
 But would something close to an inexpensive wireless dry-contact few electrodes consumer EEG device
 such as **Muse** be sufficient for meaningful results? This remains to be seen.
+
+### Dec 21, 2023 comment
+
+I was able to make BrainFlow on a Windows 10 laptop to see an old MUSE 2016 even without a dongle (--board-id 39),
+however I had to first install https://github.com/kowalej/BlueMuse, and only then BrainFlow started to work OK
+with this hardware.
