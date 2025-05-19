@@ -4,6 +4,12 @@ This is a continuation of
 
 https://github.com/anhinga/2020-notes
 
+This is continued at
+
+https://github.com/anhinga/2022-notes
+
+---
+
 I am continuing my transition from Python to Julia and 
 from PyTorch to the next generation of machine learning frameworks such as
 Julia Flux and JAX:
